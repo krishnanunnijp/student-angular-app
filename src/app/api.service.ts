@@ -14,4 +14,10 @@ export class ApiService {
   fetchStudent=()=>{
     return this.http.get("http://localhost:8080/view")
   }
+  searchStudent=(value:any)=>{
+    return this.http.post("http://localhost:8080/search",value)
+  }
+  deleteStudent=(value:any)=>{
+    return this.http.post("http://localhost:8080/delete",value)
+  }
 }
